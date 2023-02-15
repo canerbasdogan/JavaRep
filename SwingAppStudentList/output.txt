@@ -1,0 +1,27 @@
+1 Ataberk Varol
+2 Aylanur Tulga
+3 Batuhan Kahvecioğlu
+4 Caner Ahmet Başdoğan
+5 Caner Eminogullari
+6 Dilge Karakaş
+7 Duhan Uğurlu
+8 Efe Çavuşoğlu
+9 Faik Coşkun Çakır
+10 Fatih Üstün
+11 Fatma Betül Gülçam
+12 Fatma Zehra Güneş
+13 Ferhat Tuncel
+14 Güney Kuba
+15 Hasan Furkan Coşkun
+16 İlayda Balık
+17 Kaya Alp Köker
+18 Kerem Lütfi Kılınç
+19 Onur Cem Işik
+20 Osman Serhat Karaman
+21 Özden Nazlı Servi
+22 Özden Sayalan
+23 Sedanur Erganiş
+24 Yener Yumlu
+25 Yiğit Turan
+26 Yusuf İslam Tuncer
+27 Zehra Durmus

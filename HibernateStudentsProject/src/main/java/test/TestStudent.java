@@ -24,8 +24,6 @@ public class TestStudent {
         School school2 = new School("YTÜ", "University", "0212 464 74 34","info@ytu.edu.tr");
         School school3 = new School("Bilfen", "High School", "0216 262 41 41","info@bilfen.edu.tr");
 
-        //student1.setSchool(school1);
-
         student1.setSchool(school1);
         student2.setSchool(school1);
         student4.setSchool(school1);
@@ -47,25 +45,11 @@ public class TestStudent {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("mysqlPU");
         EntityManager entityManager = emf.createEntityManager();
 
-        /*try {
-            entityManager.getTransaction().begin();
-            entityManager.persist(student1);
-            entityManager.persist(school1);
-            entityManager.getTransaction().commit();
-
-        } catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        } finally {
-            entityManager.close();
-        }*/
-
-
         //saveSchools(schoolList, entityManager);
         //saveStudents(studentList, entityManager);
         //findAllStudents(entityManager);
         //deleteStudent(entityManager,student1);
         updateStudentAddress(entityManager,student3,"Taşdelen");
-
 
     }
 
@@ -77,36 +61,6 @@ public class TestStudent {
             entityManager.getTransaction().commit();
         }
 
-        /*for(Student student: studentList){
-
-            try {
-                entityManager.getTransaction().begin();
-                entityManager.persist(student);
-                entityManager.getTransaction().commit();
-
-            } catch (Exception e) {
-                entityManager.getTransaction().rollback();
-            } finally {
-                entityManager.close();
-            }
-
-        }
-
-        System.out.println("All data persisted!...");*/
-
-        /*
-        try {
-            for (Student student : studentList) {
-                entityManager.getTransaction().begin();
-                entityManager.persist(student);
-                entityManager.getTransaction().commit();
-            }
-        }catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        } finally {
-            entityManager.close();
-        }*/
-
     }
 
     private static void saveSchools(List<School> schoolList,EntityManager entityManager){
@@ -116,37 +70,6 @@ public class TestStudent {
             entityManager.persist(school);
             entityManager.getTransaction().commit();
         }
-        /*for(School school: schoolList){
-
-            try {
-                entityManager.getTransaction().begin();
-                entityManager.persist(school);
-                entityManager.getTransaction().commit();
-
-            } catch (Exception e) {
-                entityManager.getTransaction().rollback();
-            } finally {
-                entityManager.close();
-            }
-
-        }
-
-        System.out.println("All data persisted!...");*/
-
-        /*try {
-            for (School school: schoolList) {
-                entityManager.getTransaction().begin();
-                entityManager.persist(school);
-                entityManager.getTransaction().commit();
-            }
-        }catch (Exception e) {
-            entityManager.getTransaction().rollback();
-        } finally {
-            entityManager.close();
-        }*/
-
-
-
 
     }
 
@@ -182,11 +105,7 @@ public class TestStudent {
         entityManager.merge(foundStudent);
         entityManager.getTransaction().commit();
         System.out.println(student + " updated");
-
-
+        
     }
-
-
-
 
 }

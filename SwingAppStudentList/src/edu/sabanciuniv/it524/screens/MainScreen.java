@@ -34,27 +34,22 @@ public class MainScreen extends JFrame {
 	
 	public MainScreen()
 	{
-		this.setTitle("IT524 Homework 3");
+		this.setTitle("SwingAPP Mini Project");
 		this.getContentPane().setLayout(null);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(400, 450);
 		this.setLocationRelativeTo(null);
 		
-		//Buton ekliyoruz
 		this.fileReadButton = new  JButton("Read File ...");
 		this.fileReadButton.setLocation(280, 20);
 		this.fileReadButton.setSize(100, 25);
 		this.getContentPane().add(fileReadButton);
-		
-		//Seçilen dosya isminin görüneceği textfield ekliyoruz
+
 		this.fileNameField = new JTextField();
 		this.fileNameField.setLocation(20, 20);
 		this.fileNameField.setSize(250, 25);
 		this.getContentPane().add(fileNameField);
 		
-		
-		//Dosyanın içeriğinin görüntüleneceği textArea yı önce ScrollPane içerisine ekleyoruz
-		//Sonra scrollpane i frame ekliyoruz
 		this.fileContentArea = new JTextArea();
 		this.fileContentArea.setLocation(20, 60);
 		this.fileContentArea.setSize(360, 250);
@@ -65,11 +60,6 @@ public class MainScreen extends JFrame {
 		this.fileContentScrollPane.setSize(360, 250);
 		this.getContentPane().add(fileContentScrollPane);
 		
-		
-		
-		
-		//Buton a kliklendiğinde JFileChooser (Dosya seçme ekranı) açıyoruz
-		//Bunun için button un mouseClicked eventini override etmemiz gerekiyor
 		this.fileReadButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -94,10 +84,7 @@ public class MainScreen extends JFrame {
 			            	fileContentArea.append(tsv.readFile(fileNameField.getText()));
 			            	
 			            }
-			            
-			            //TODO : Homework1 Read, parse and get content of the selected file  (students.tsv or students.csv) as string
-			            //TODO : Print the content into fileContentArea
-			            //Please use CSVParser or TSVParser classes for this		         
+	         
 			        }
 			}
 		});
@@ -130,8 +117,7 @@ public class MainScreen extends JFrame {
 			}
 			
 		});
-		
-		//Veritabanına kaydetme butonunu ekliyoruz
+
 		this.dbSaveButton = new  JButton("Save Database (Students table)");
 		this.dbSaveButton.setLocation(buttonStartXLoc, buttonStartYLoc+(2*buttonHeight));
 		this.dbSaveButton.setSize(buttonWidth, buttonHeight);
@@ -186,7 +172,7 @@ public class MainScreen extends JFrame {
 					System.out.println("Inserted to Database...");
 					
 				} catch (SQLException e1) {
-					System.out.println("olmadı...");
+					System.out.println("Error...");
 					e1.printStackTrace();
 				}
 				
@@ -196,5 +182,4 @@ public class MainScreen extends JFrame {
 		
 	}
 	
-
 }
